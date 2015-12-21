@@ -84,7 +84,8 @@ function death_meter_one_shortcode() {
     </div><!--#shortcode_wrapper -->";*/
 	
 	//read contents of html view
-	$content = file_get_contents('/views/template.html', true);
+	$templateContent = include('/views/template.html');
+	$content = $templateContent;
 	
 	echo substr($content, 0,101);
 	return $english_format_number;
